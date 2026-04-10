@@ -219,3 +219,85 @@ html {
 .navbar {
     backdrop-filter: blur(10px);
 }
+.testimonials{
+display:flex;
+gap:25px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.testimonial{
+background:#1a1a1a;
+padding:25px;
+width:260px;
+border-radius:12px;
+text-align:left;
+transition:0.3s;
+}
+
+.testimonial:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px #00f0ff;
+}
+
+.testimonial p{
+color:#ccc;
+margin-bottom:15px;
+}
+
+.testimonial h4{
+color:#00f0ff;
+font-weight:normal;
+}
+/* Carousel container */
+.testimonial-carousel{
+display:flex;
+gap:20px;
+overflow:hidden;
+position:relative;
+}
+
+/* Individual testimonial */
+.testimonial{
+background:#1a1a1a;
+padding:25px;
+width:280px;
+border-radius:15px;
+text-align:center;
+position:relative;
+transition:0.3s;
+}
+
+/* Speech bubble triangle */
+.testimonial::after{
+content:"";
+position:absolute;
+bottom:-10px;
+left:50%;
+transform:translateX(-50%);
+border-width:10px;
+border-style:solid;
+border-color:#1a1a1a transparent transparent transparent;
+}
+
+/* Profile picture */
+.testimonial img{
+width:60px;
+height:60px;
+border-radius:50%;
+margin-bottom:15px;
+}
+
+/* Stars */
+.stars{
+color:gold;
+margin:10px 0;
+font-size:18px;
+}
+
+/* Hover effect */
+.testimonial:hover{
+transform:translateY(-8px);
+box-shadow:0 0 20px #00f0ff;
+}
