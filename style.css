@@ -1,0 +1,143 @@
+/* General body style */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f; /* fallback for older browsers */
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: linear-gradient(90deg, #1e1e2f, #3a3a5a);
+}
+
+.nav-logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #00f0ff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00f0ff;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a2f, #2a2a50);
+}
+
+.hero h1 {
+    font-size: 48px;
+    max-width: 800px;
+    background: linear-gradient(90deg, #00f0ff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: #ccc;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+/* Button */
+.btn {
+    background: #00f0ff;
+    color: #0f0f0f;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    background: #ff00ff;
+    transform: scale(1.05);
+}
+
+/* Sections */
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a3a);
+    padding: 30px;
+    width: 250px;
+    border-radius: 12px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, #00f0ff, #ff00ff);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(90deg, #1e1e2f, #3a3a5a);
+    color: #ccc;
+}
+.portfolio-grid{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.portfolio-card{
+background:#1a1a1a;
+padding:30px;
+width:260px;
+border-radius:12px;
+text-align:center;
+transition:0.3s;
+}
+
+.portfolio-card:hover{
+transform:translateY(-5px);
+background:#222;
+}
+
+.portfolio-card p{
+color:#aaa;
+margin:15px 0;
+}
