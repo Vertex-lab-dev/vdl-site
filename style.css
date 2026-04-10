@@ -141,3 +141,31 @@ background:#222;
 color:#aaa;
 margin:15px 0;
 }
+/* Animated gradient background */
+body {
+    background: linear-gradient(-45deg, #0f0f0f, #1a1a2f, #2a2a50, #000);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Glow button */
+.btn {
+    background: #00f0ff;
+    color: black;
+    padding: 14px 35px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 0 15px #00f0ff;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 25px #ff00ff;
+    transform: scale(1.05);
+}
