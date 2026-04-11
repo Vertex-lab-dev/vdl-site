@@ -129,12 +129,18 @@
     <h2>Let’s Build Your Website 🚀</h2>
     <p>Fill this out and I’ll get back to you within 24 hours.</p>
 
-    <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Tell me about your project..." required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-    </form>
+    <form action="https://formspree.io/f/xykbrnpy" method="POST" class="contact-form">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Tell me about your project..." required></textarea>
+
+<button type="submit" class="btn">Send Message</button>
+
+</form>
+<p id="form-status"></p>
 </section>
 
     <footer>
@@ -173,6 +179,30 @@ function autoSlide(){
 }
 
 setInterval(autoSlide, 20);
+</script>
+<script>
+const form = document.querySelector('.contact-form');
+const status = document.getElementById('form-status');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+
+  fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      status.innerHTML = "✅ Message sent!";
+      form.reset();
+    } else {
+      status.innerHTML = "❌ Something went wrong.";
+    }
+  });
+});
 </script>
 </body>
 </html>

@@ -301,3 +301,8 @@ font-size:18px;
 transform:translateY(-8px);
 box-shadow:0 0 20px #00f0ff;
 }
+#form-status{
+margin-top:15px;
+color:#00f0ff;
+font-weight:bold;
+}
