@@ -306,3 +306,48 @@ margin-top:15px;
 color:#00f0ff;
 font-weight:bold;
 }
+.hero {
+position: relative;
+}
+
+.hero::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0,0,0,0.6);
+}
+
+.hero * {
+position: relative;
+}
+.portfolio-card {
+position: relative;
+overflow: hidden;
+}
+
+.portfolio-card::after {
+content: "View Project";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+opacity: 0;
+color: white;
+font-size: 18px;
+transition: 0.3s;
+}
+
+.portfolio-card:hover::after {
+opacity: 1;
+}
+
+.portfolio-card img {
+transition: 0.3s;
+}
+
+.portfolio-card:hover img {
+filter: brightness(0.5);
+}
